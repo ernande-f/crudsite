@@ -52,4 +52,11 @@ button {
 .fourth-color { 
 	color: #be3144; 
 }
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:auto;
+    height:60px;   
+}
   
