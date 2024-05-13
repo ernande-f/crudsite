@@ -1,31 +1,55 @@
 body {
     margin: 0 50px;
+    display: table;
+    height: 100%;
   }
   
-  .container {
+.container {
     display: flex;
     gap: 50px;
   }
   
-  #posts {
-    width: 400px;
-  }
-  
-  button {
-    cursor: pointer;
+#posts {
+  width: 400px;
+}
+
+button {
+  cursor: pointer;
+}
+#posts div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  gap: 25px;
+}
+
+#msg {
+  color: red;
+}
+
+#title {
+    text-align: center;
+    font-family: sans-serif;
+
   }
 
-  #posts div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.first-color { 
+	background: #d3d6db; 
+}
+	
+.second-color { 
+	color: #3a4750; 
+}
+
+.third-color { 
+	color: #303841; 
+}
+
+.fourth-color { 
+	color: #be3144; 
+}
   
-  .options {
-    display: flex;
-    gap: 25px;
-  }
-  
-  #msg {
-    color: red;
-  }
