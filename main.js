@@ -11,8 +11,9 @@ form.addEventListener("submit", (e) => {
 });
 
 let formValidation = () => {
+    // redundante, já que o input é requisitado pelo form
     if (input.value === "") {
-        msg.innerHTML = "Post cannot be blank";
+        msg.innerHTML = "post não pode ser vazio";
         console.log("failure");
     } else {
         console.log("success");
