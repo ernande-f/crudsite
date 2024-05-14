@@ -1,13 +1,53 @@
 let form = document.getElementById("form");
 let input = document.getElementById("input");
 let msg = document.getElementById("msg");
-let posts = document.getElementById("posts");
+let post = document.getElementById("posts");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("botão foi clicado");
+    console.log("button clicked");
 
     formValidation();
 });
 
-let formValidation = () => {};
+let formValidation = () => {
+    if (input.value === "") {
+        msg.innerHTML = "Post cannot be blank";
+        console.log("failure");
+    } else {
+        console.log("success");
+        msg.innerHTML = "";
+        acceptData();
+    }
+};
+
+let createPost = (data) => {
+    post.innerHTML += `
+        <div>
+            <p>${data.text}</p>
+            <span class="options">
+                <button onClick="editPost(this)">editar</button>
+                <button onClick="deletePost(this)">deletar</button>
+            </span>
+        </div>
+    `;
+    input.value = "";
+};
+
+let acceptData = () => {
+    let data = {};
+    data["text"] = input.value;
+    console.log(data);
+    createPost(data);
+};
+
+let editPost = (e) => {
+    input.value = e.parentElement.previousElementSibling.innerHTML;
+    e.parentElement.parentElement.remove();
+    console.log("post editado");
+}
+
+let deletePost = (e) => {
+    e.parentElement.parentElement.remove();
+    console.log("post removido");
+}

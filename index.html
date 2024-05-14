@@ -4,48 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
     <title>Document</title>
-
 </head>
 <body class="first-color">
     <h1 class="second-color" id="title">Create, Read, Update and Delete system</h1>
     
-
     <div class="third-color">
         <div class="container">
-
             <div class="left">
                 <form id="form">
-                    <label for="post"> poste aqui</label>
+                    <label for="post"> poste aqui </label>
                     <br><br>
-                    <textarea name="post" id="post" cols="30" rows="10"></textarea>
+                    <textarea name="post" id="input" cols="30" rows="10" required></textarea>
                     <br><br>
                     <div id="msg"></div>
                     <button type="submit">enviar</button>
                 </form>
-
             </div>
-
             <div class="right">
-                <hr>
-                <h3>posts</h3>
+                <h2>Posts</h2>
                 <div id="posts">
                     <div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, deleniti laboriosam? Molestias explicabo debitis tenetur praesentium quasi unde delectus ipsa velit, voluptates omnis. Nostrum, placeat pariatur? Aspernatur necessitatibus deserunt deleniti.</p>
-                        <span class="opções">
-                            <button>editar</button>
-                            <button>excluir</button>
+                        <p>teste</p>
+                        <span class="options">
+                            <button onClick="editPost(this)">editar</button>
+                            <button onClick="deletePost(this)">deletar</button>
                         </span>
                     </div>
                 </div>
-                <hr style="margin-top: 30px;">
             </div>
-
         </div>
     </div>
     <footer>
         <h5 class="fourth-color"> Currently in development by Ernande and Artur</h5>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

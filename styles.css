@@ -13,9 +13,6 @@ body {
   width: 400px;
 }
 
-button {
-  cursor: pointer;
-}
 #posts div {
   display: flex;
   align-items: center;
@@ -59,4 +56,20 @@ footer {
     width:auto;
     height:60px;   
 }
+
+form, input, button {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+th, td {
+  border: 1px solid #303841;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
   
